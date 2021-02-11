@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
-	@GetMapping(value = "/hello")
-	public String sayHello(Model model) {
-		model.addAttribute("nom", "Wick");
-		return "jsp/hello";
+public class ThymeleafController {
+	@GetMapping(value = "/thymeleaf")
+	public String displayMessage(Model model) {
+		model.addAttribute("message", "Hello World!");
+		return "thymeleaf/index";
 	}
 }
